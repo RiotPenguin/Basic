@@ -43,6 +43,7 @@ def register():
     user_credentials[username] = password
     write_user_credentials(user_credentials)
     print("Registration successful!")
+    print("Your new password is : " + password)
     time.sleep(2)  # Adding a delay of 2 seconds
 
 def login():
@@ -109,6 +110,7 @@ def change_password(username):
     user_credentials[username] = new_password
     write_user_credentials(user_credentials)
     print("Password changed successfully!")
+    print("Your new password is : " + password)
     time.sleep(2)  # Adding a delay of 2 seconds
 
 # Read existing user credentials
