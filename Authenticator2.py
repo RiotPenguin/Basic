@@ -1,3 +1,7 @@
+#Joel Newman
+#1/5/24
+#Terminal Based Login System
+
 import random
 import string
 import time
@@ -110,7 +114,7 @@ def change_password(username):
     user_credentials[username] = new_password
     write_user_credentials(user_credentials)
     print("Password changed successfully!")
-    print("Your new password is : " + password)
+    print("Your new password is : " + new_password)
     time.sleep(2)  # Adding a delay of 2 seconds
 
 # Read existing user credentials
@@ -136,12 +140,15 @@ while True:
                     print("\nAdmin Menu:")
                     print("1. View Accounts")
                     print("2. Logout")
+                    print("3. Change Password")
                     sub_choice = input("Select an option: ").lower()
                     if sub_choice == "1":
                         view_accounts()
                     elif sub_choice == "2":
                         print("Logging out...")
                         break
+                    elif sub_choice == "3":
+                        change_password(username)
                     else:
                         print("Invalid choice. Please select again.")
             else:
