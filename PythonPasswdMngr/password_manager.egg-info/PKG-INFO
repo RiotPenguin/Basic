@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: password_manager
+Version: 0.1
+Requires-Dist: cryptography
